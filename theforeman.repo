@@ -1,0 +1,6 @@
+[candlepin]
+name = Candlepin 4.1
+baseurl = https://yum.theforeman.org/katello/4.3/candlepin/el8/x86_64/
+gpgcheck = 1
+gpgkey = https://yum.theforeman.org/releases/3.1/RPM-GPG-KEY-foreman
+enabled = 1
