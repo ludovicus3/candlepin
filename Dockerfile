@@ -12,6 +12,11 @@ RUN \
   dnf install candlepin -y && \
   dnf clean all
 
+ADD etc/tomcat/cert-roles.properties /etc/tomcat/cert-roles.properties
+ADD etc/tomcat/login.config /etc/tomcat/login.config
+ADD etc/tomcat/tomcat.conf /etc/tomcat/tomcat.conf
+ADD etc/tomcat/conf.d/jaas.conf /etc/tomcat/conf.d/jaas.conf 
+
 RUN date -u > BUILD_TIME
 
 EXPOSE 8080/tcp
