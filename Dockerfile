@@ -9,8 +9,10 @@ ADD theforeman.repo /etc/yum.repos.d/theforeman.repo
 RUN \
   dnf upgrade -y && \
   dnf module enable pki-core pki-deps -y && \
-  dnf install candlepin postgresql -y && \
+  dnf install candlepin postgresql openssl -y && \
   dnf clean all
+
+ADD build_certs.sh /usr/local/bin/build_certs
 
 ADD etc/tomcat/cert-roles.properties /etc/tomcat/cert-roles.properties
 ADD etc/tomcat/login.config /etc/tomcat/login.config
