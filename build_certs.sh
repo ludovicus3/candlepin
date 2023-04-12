@@ -62,3 +62,6 @@ add_trust candlpin-ca /var/run/secrets/tomcat/ca.crt
 add_trust atemis-client /var/run/secrets/foreman/tls.crt
 
 add_key tomcat /var/run/secrets/tomcat/tls.crt /var/run/secrets/tomcat/tls.key /var/run/secrets/tomcat/ca.crt
+
+cp /var/run/secrets/ca/tls.crt /etc/candlepin/certs/candlepin-ca.crt
+cp /var/run/secrets/ca/tls.key /etc/candlepin/certs/candlepin-ca.key
