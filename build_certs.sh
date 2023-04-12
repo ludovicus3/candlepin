@@ -1,11 +1,11 @@
 #!/bin/bash
 
-$TRUSTSTORE=/etc/candlepin/certs/truststore
-$KEYSTORE=/etc/candlepin/certs/keystore
+TRUSTSTORE=/etc/candlepin/certs/truststore
+KEYSTORE=/etc/candlepin/certs/keystore
 
-$PASSWORD_DIR=/var/run/secrets/passwords
-$KEYSTORE_PASSWORD=$PASSWORD_DIR/KEYSTORE_PASSWORD
-$TRUSTSTORE_PASSWORD=$PASSWORD_DIR/TRUSTSTORE_PASSWORD
+PASSWORD_DIR=/var/run/secrets/passwords
+KEYSTORE_PASSWORD=$PASSWORD_DIR/KEYSTORE_PASSWORD
+TRUSTSTORE_PASSWORD=$PASSWORD_DIR/TRUSTSTORE_PASSWORD
 
 function add_key {
   local pkcs12=/tmp/pkcs12
