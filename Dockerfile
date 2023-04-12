@@ -9,7 +9,7 @@ ADD theforeman.repo /etc/yum.repos.d/theforeman.repo
 RUN \
   dnf upgrade -y && \
   dnf module enable pki-core pki-deps -y && \
-  dnf install candlepin -y && \
+  dnf install candlepin postgresql -y && \
   dnf clean all
 
 ADD etc/tomcat/cert-roles.properties /etc/tomcat/cert-roles.properties
